@@ -1,0 +1,24 @@
+{
+    "name": "get first gist of a user",
+    "operations": {
+        "getGist": "99d64f8e-eace-417d-8cea-511621aaf57c",
+        "listGists": "9446bdf1-da5a-4096-98bc-47cfa8c15157"
+    },
+    "parameters": {
+        "username": "freehaha"
+    },
+    "sequence": [
+        {
+            "operation": "listGists",
+            "parameters": {
+                "user": ".username"
+            }
+        },
+        {
+            "operation": "getGist",
+            "parameters": {
+                "gistId": "._results[\"0\"][0].id"
+            }
+        }
+    ]
+}
