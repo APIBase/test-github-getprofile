@@ -1,2 +1,2 @@
-# recipie-get-first-gist
-get first gist of a user
+# test-github-profile
+test if GetProfile Operation returns specified user profile

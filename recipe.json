@@ -1,24 +1,24 @@
 {
-    "name": "get first gist of a user",
+    "name": "test GetProfile operation",
     "operations": {
-        "getGist": "99d64f8e-eace-417d-8cea-511621aaf57c",
-        "listGists": "9446bdf1-da5a-4096-98bc-47cfa8c15157"
+        "getProfile": "07acb558-7626-4bb4-946a-2ddd77c4dbb6"
     },
-    "parameters": {
-        "username": "freehaha"
-    },
+    "test": true,
     "sequence": [
         {
-            "operation": "listGists",
+            "operation": "getProfile",
             "parameters": {
-                "user": ".username"
+                "id": ".username"
             }
         },
         {
-            "operation": "getGist",
+            "operation": "$query",
             "parameters": {
-                "gistId": "._results[\"0\"][0].id"
+                ".": "._results[\"0\"].login == \"freehaha\""
             }
         }
-    ]
+    ],
+    "parameters": {
+        "username": "freehaha"
+    }
 }
